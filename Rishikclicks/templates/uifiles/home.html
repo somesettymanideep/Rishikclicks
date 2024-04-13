@@ -1,0 +1,323 @@
+
+{% extends 'uifiles/base.html' %}
+{% load static %}
+{% block content %}
+     
+    
+
+        
+
+        <!-- SILDER-->
+        <section class="slide slide-1">
+            <div class="container-fluid">
+                
+                <div class="section__content section__content--w1760">
+                    <div class="slide-wrapper js-slick-wrapper" data-slick-autoplay="true" data-slick-fade="true">
+                        <div class="slide__content js-slick-content">
+                            {% for item in bgimg %} 
+                            <div class="slide-item">
+                                <img src="/media/{{item.Bannerimg}}" alt="Slide 1">
+                                <div class="slide__caption js-first-slick clearfix d-none d-lg-block" data-animation="fadeInUp" data-animation-delay=".1s">
+                                    <div class="number float-left">01</div>
+                                    <h2 class="text">{{item.Title}}</h2>
+                                </div>
+                            </div>
+                            
+                            {% endfor %}
+                            
+                        </div>
+                        <div class="slide-arrows">
+                            <i class="zmdi zmdi-arrow-left js-slick-arrow-left prev"></i>
+                            <i class="zmdi zmdi-arrow-right js-slick-arrow-right next"></i>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+        <!-- END SLIDER-->
+
+        <!-- WHO AM I-->
+        <section class="who-ami p-t-100 p-b-150">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="who-ami__greetings clearfix">
+                            <div class="who-ami__greetings-left clearfix float-lg-left wow fadeInLeft" data-wow-delay="1s">
+                                <h2 class="greetings">Hi, my name is</h2>
+                                <h2 class="name float-right">Victor Umber</h2>
+                            </div>
+                            <div class="who-ami__greetings-right wow fadeInRight" data-wow-delay="1.5s">
+                                <p>
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptate accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-t-60">
+                    <div class="col-lg-10">
+                        <div class="who-ami__img">
+                            <a href="contact.html">
+                                <img src="{% static 'images/home/about.png' %}" alt="Victor Umber">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="who-ami__title">
+                            <div class="who-ami__title-text wow fadeInLeft" data-wow-delay=".4s">enthusiasm Photographer</div>
+                            <a class="au-btn au-btn--dark">contact now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>   
+        <!-- END WHO AM I-->
+        <section class="project-info-1 lastest-work project-marsonry-2col project-info-3 p-t-50 p-b-70">
+           
+            <div class="container">
+                
+                <h2 class="title  text-center">Capturing Moments: Behind the Lens of Creativity</h2>
+                <p class="px-5 py-3" >In  photography, every click tells a story. From the serene landscapes to the bustling streets, photographers weave tales through their lenses, freezing moments in time. It's not just about capturing images; it's about capturing emotions, memories, and the essence of life itself. </p>
+            
+                <div class="project-image-wrap">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class=" latest-work__item project-image">
+                                <div class="bg-overlay"></div>
+                                <img src="{% static 'images/home/pre-wedding-photoshoot.png' %}" alt="Project 1">
+                                <div class="body">
+                                    <h3>Pre Wedding shoot</h3>
+                                </div>
+                            </div>
+                            <!-- <div class="latest-work__item">
+                                <a class="link" href="album-v1.html"></a>
+                                <div class="image">
+                                    <div class="bg-overlay"></div>
+                                    <img src="images/project-16.jpg" alt="color" />
+                                </div>
+                                <div class="body">
+                                    <h3>color</h3>
+                                </div>
+                            </div> -->
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="latest-work__item project-image">
+                                        <div class="bg-overlay"></div>
+                                        <img src="{% static 'images/home/girl-makeup.png' %}" alt="Project 2">
+                                        <div class="body">
+                                            <h3>Birdal photshoot</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="latest-work__item project-image">
+                                        <div class="bg-overlay"></div>
+                                        <img src="{% static 'images/home/serthamu.png' %}" alt="Project 3">
+                                        <div class="body">
+                                            <h3>Sreemanthamu</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="latest-work__item project-image">
+                                <div class="bg-overlay"></div>
+                                <img src="{% static 'images/home/classicwedding.png' %}" alt="Project 4">
+                                <div class="body">
+                                    <h3>Classic Weddding </h3>
+                                </div>
+                            </div>
+                            <div class="latest-work__item project-image">
+                                <div class="bg-overlay"></div>
+                                <img src="{% static 'images/home/hldi.png' %}" alt="Project 5">
+                                <div class="body">
+                                    <h3>Haldi</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="latest-work__item project-image">
+                                <div class="bg-overlay"></div>
+                                <img src="{% static 'images/home/kids.png' %}" alt="Project 4">
+                                <div class="body">
+                                    <h3>Kids Photography </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+          <!-- ALBUM-->
+          <section class="album-2 p-t-40 p-b-100 js-list-load">
+            <div class="container">
+                <h2 class="title m-b-35 text-center" style="font-weight:600;">Recent Projects</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="album-item">
+                            <div class="album-item__image">
+                                <a href="project-info-v1.html">
+                                    <img src="{% static 'images/home/rtwo.png'%}" alt="girl" />
+                                </a>
+                            </div>
+                            <h4 class="album-item__title">
+                                <a href="project-info-v1.html">Goa</a>
+                                <span class="price">89.00</span>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="album-item">
+                            <div class="album-item__image">
+                                <a href="project-info-v1.html">
+                                    <img src="{% static 'images/home/rthree.png' %}" alt="urban fashion" />
+                                </a>
+                            </div>
+                            <h4 class="album-item__title">
+                                <a href="project-info-v1.html">Hyedrabad</a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="album-item">
+                            <div class="album-item__image">
+                                <a href="project-info-v1.html">
+                                    <img src="{% static 'images/home/rfive.png' %}" alt="light" />
+                                </a>
+                            </div>
+                            <h4 class="album-item__title">
+                                <a href="project-info-v1.html">Chennai</a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="see-more">
+                    <a class="au-btn au-btn--dark au-btn--p50 js-load-btn" href="#">see more</a>
+                </div>
+            </div>
+        </section>
+      <!-- CLIENT SAY-->
+    
+      <!-- CLIENT SAY-->
+      <section class="client-say js-parallax-scroll p-t-60 p-b-55" style="background: url('../../static/images/home/we-test.jpg') center center / cover no-repeat fixed;">
+        <div class="bg-overlay bg-overlay--opa60"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="title">what clients say</h2>
+                </div>
+            </div>
+            <div class="section__content section__content--w860">
+                <div class="slide-wrapper js-slick-wrapper" data-slick-autoplay="true" data-slick-centerpadding="30px" data-slick-fade="true">
+                    <div class="slide__content js-slick-content">
+                        <div class="slide-item client-say__item">
+                            <blockquote class="text" data-animation="fadeInDown" data-animation-delay=".2s">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aper iam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                                enim keys ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui rativit oluptatem sequi nesciunt.</blockquote>
+                            <div class="thumb">
+                                <div class="image">
+                                    <div class="image__inner" data-animation="zoomIn" data-animation-delay=".3s">
+                                        <img src="{% static 'images/home/test-wmen.png' %}" alt="Myra Reeves" />
+                                    </div>
+                                    <div class="slide-arrow">
+                                        <i class="zmdi zmdi-arrow-left js-slick-arrow-left prev"></i>
+                                        <i class="zmdi zmdi-arrow-right js-slick-arrow-right next"></i>
+                                    </div>
+                                </div>
+                                <h5 class="name">Myra Reeves</h5>
+                                <a class="hashtag" href="#">Myra_Reeves</a>
+                            </div>
+                        </div>
+                        <div class="slide-item client-say__item">
+                            <blockquote class="text" data-animation="fadeInDown" data-animation-delay=".2s">Mauris et elit ut magna aliquam tempus id non mi. Morbi tortor ex, blandit a lectus sit amet, tempor hendrerit turpis. Nunc eu ultrices diam. Morbi in nisi ipsum. Quisque viverra finibus felis vitae hendrerit. Sed sed lorem
+                                ultricies arcu iaculis sagittis quis id dui. Morbi consectetur, elit id pretium sodales, odio nisi eleifend ante, in ultricies ligula risus vel ipsum.</blockquote>
+                            <div class="thumb">
+                                <div class="image">
+                                    <div class="image__inner" data-animation="zoomIn" data-animation-delay=".3s">
+                                        <img src="{% static 'images/home/test-men.png' %}" alt="Mark Adien" />
+                                    </div>
+                                    <div class="slide-arrow">
+                                        <i class="zmdi zmdi-arrow-left js-slick-arrow-left prev"></i>
+                                        <i class="zmdi zmdi-arrow-right js-slick-arrow-right next"></i>
+                                    </div>
+                                </div>
+                                <h5 class="name">Mark Adien</h5>
+                                <a class="hashtag" href="#">Mark_Adien</a>
+                            </div>
+                        </div>
+                        <div class="slide-item client-say__item">
+                            <blockquote class="text" data-animation="fadeInDown" data-animation-delay=".2s">Proin vitae quam libero. Pellentesque faucibus, ex in cursus congue, tortor enim sollicitudin nibh, nec varius neque tellus ac eros. Cras viverra vitae nisl elementum commodo. Fusce fringilla ornare neque, id euismod ante
+                                viverra a. Integer et ex id turpis pharetra dictum. Vivamus eget ante in diam ultricies molestie a sit amet eros. Etiam eget quam velit.</blockquote>
+                            <div class="thumb">
+                                <div class="image">
+                                    <div class="image__inner" data-animation="zoomIn" data-animation-delay=".3s">
+                                        <img src="{% static 'images/home/test-men.png' %}" alt="Anna Smith" />
+                                    </div>
+                                    <div class="slide-arrow">
+                                        <i class="zmdi zmdi-arrow-left js-slick-arrow-left prev"></i>
+                                        <i class="zmdi zmdi-arrow-right js-slick-arrow-right next"></i>
+                                    </div>
+                                </div>
+                                <h5 class="name">Anna Smith</h5>
+                                <a class="hashtag" href="#">Anna_Smith</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END CLIENT SAY-->
+        <!-- RECENT BLOG-->
+        <section class="recent-blog p-t-70">
+            <div class="container">
+                <div class="recent-blog__title-wrap clearfix m-b-90">
+                    <h2 class="recent-blog__title float-right wow fadeInRight " data-wow-delay=".2s">Our Story</h2>
+                </div>
+                <div class="recent-blog__item clearfix">
+                    <div class="image-wrap float-lg-left">
+                        <div class="image">
+                            <a href="blog-detail.html">
+                                <img src="{% static 'images/home/our-his.png' %}" alt="PHOTOGRAPHY IS A FORM OF TIME TRAVEL" />
+                            </a>
+                        </div>
+                        <div class="bg-layer d-none d-lg-block bg-layer--right"></div>
+                    </div>
+                    <div class="content content--right bg-style">
+                        <h2 class="title">
+                            <a href="blog-detail.html">PHOTOGRAPHY IS A FORM OF TIME TRAVEL</a>
+                        </h2>
+                        <p class="date">June 15 2017</p>
+                        <p class="text">Sed ut perspiciatis unde omnis iste natus error sit volupta accusantium doloremque laudantium, totam rem aperi, eaque ipsa quae ab illo inventore veritatis et quasi archit beatae vitae dicta sunt explicabo. Nemo enim ipsam alt
+                            voluptatem quia voluptas sit aspernatur aut odit aut mov fugit, sed quia consequuntur.</p>
+                        <a class="au-btn au-btn--border au-btn--p40 au-btn--border-6" href="blog-detail.html">read more</a>
+                    </div>
+                </div>
+                <div class="recent-blog__item clearfix">
+                    <div class="image-wrap float-lg-right">
+                        <div class="image">
+                            <a href="blog-detail.html">
+                                <img src="{% static 'images/home/his-two.png' %}" alt="SHOOT WHAT YOU LOVE" />
+                            </a>
+                        </div>
+                        <div class="bg-layer d-none d-lg-block bg-layer--left"></div>
+                    </div>
+                    <div class="content content--left bg-style">
+                        <h2 class="title">
+                            <a href="blog-detail.html">SHOOT WHAT YOU LOVE</a>
+                        </h2>
+                        <p class="date">March 24 2017</p>
+                        <p class="text">Sed ut perspiciatis unde omnis iste natus error sit volupta accusantium doloremque laudantium, totam rem aperi, eaque ipsa quae ab illo inventore veritatis et quasi archit beatae vitae dicta sunt explicabo. Nemo enim ipsam alt
+                            voluptatem quia voluptas sit aspernatur aut odit aut mov fugit, sed quia consequuntur.</p>
+                        <a class="au-btn au-btn--border au-btn--p40 au-btn--border-6" href="blog-detail.html">read more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END RECENT BLOG-->
+
+{% endblock %}
+
+    
+
