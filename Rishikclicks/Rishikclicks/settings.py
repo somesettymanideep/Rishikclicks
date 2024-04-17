@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-$@jagmrkdhx=asyvcz(c7!k2bb=eenbw&d-aqgnd6o^f*in&#s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app','.now.sh']
 
 
 # Application definition
@@ -77,10 +77,20 @@ WSGI_APPLICATION = 'Rishikclicks.wsgi.application'
 
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'GzCkMixulXwWnIPYlkex',
+        'HOST': 'containers-us-west-92.railway.app',
+        'PORT': '5526',
     }
 }
 
@@ -93,7 +103,7 @@ UPLOAD_URL ='uploads'
 if DEBUG:
     STATICFILES_DIRS = [STATIC_DIR,]
 else:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build' 'static')
 
 
 
